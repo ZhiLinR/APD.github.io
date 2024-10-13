@@ -38,7 +38,7 @@ public class MiddlewareService {
      * @return a map containing the UUID and other information if validation is successful.
      */
     public Map<String, Object> checkJwt(String token) {
-        ReadWriteLock jwtLock = LockFactory.getRWLock("JWTValidationLock");
+        ReadWriteLock jwtLock = LockFactory.getRWLock(token);
         String uuid;
         Map<String, Object> result;
 
