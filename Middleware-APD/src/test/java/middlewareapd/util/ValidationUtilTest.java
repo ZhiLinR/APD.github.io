@@ -13,7 +13,7 @@ import middlewareapd.exception.*;
  * when the validation fails.
  * </p>
  *
- * <h3>Test Methods:</h3>
+ * <b>Test Methods:</b>
  * <ul>
  *     <li>{@link #testValidUuid()} - Verifies that valid UUIDs pass the validation without exceptions.</li>
  *     <li>{@link #testInvalidUuid()} - Ensures that invalid UUIDs throw an {@link UnauthorizedException}.</li>

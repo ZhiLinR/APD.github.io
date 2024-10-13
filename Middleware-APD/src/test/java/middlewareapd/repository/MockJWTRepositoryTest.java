@@ -14,7 +14,7 @@ import middlewareapd.model.JWToken;
  * by UUID, both with valid and invalid UUIDs.
  * </p>
  * 
- * <h3>Test Methods:</h3>
+ * <b>Test Methods:</b>
  * <ul>
  *     <li>{@link #testGetTokenByUuid()} - Verifies that a valid token is returned
  *     when a valid UUID is provided.</li>

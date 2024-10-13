@@ -26,7 +26,7 @@ import middlewareapd.model.JWToken;
  * the behavior of the repository without interacting with the actual data source.
  * </p>
  *
- * <h3>Test Methods:</h3>
+ * <b>Test Methods:</b>
  * <ul>
  *     <li>{@link #testCheckJwt_ValidToken()} - Verifies the correct handling of a valid JWT token,
  *     including the validation logic and updating the repository.</li>

@@ -14,8 +14,22 @@ import middlewareapd.util.*;
 import middlewareapd.exception.*;
 
 /**
- * Test class for MiddlewareService to validate concurrency handling, race conditions,
- * and lock management using read-write locks.
+ * Unit tests for the {@link MiddlewareService} class.
+ * <p>
+ * This test class ensures that the concurrency handling, race conditions, and lock management
+ * within the {@link MiddlewareService} works as expected. The {@link MockJWTRepository} is mocked 
+ * to simulate the behavior of the repository without interacting with the actual data source.
+ * </p>
+ *
+ * <b>Test Methods:</b>
+ * <ul>
+ *     <li>{@link #testConcurrentTokenUpdate()} - Validates that concurrent updates to the same token 
+ *     are handled properly by using a write lock to prevent race conditions.</li>
+ *     <li>{@link #testConcurrentLogoutDuringValidation()} - Ensures that a race condition between 
+ *     JWT validation and user logout is correctly managed, with logout taking precedence.</li>
+ *     <li>{@link #testReadWriteLockBehavior()} - Validates the behavior of read-write locks during 
+ *     concurrent operations, ensuring multiple reads are allowed but writes block both reads and other writes.</li>
+ * </ul>
  */
 public class MiddlewareConcurrencyTest {
 
