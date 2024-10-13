@@ -125,7 +125,7 @@ public class Main {
         executorService.shutdown(); // Initiate shutdown
 
         try {
-            if (!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
+            if (!executorService.awaitTermination(300, TimeUnit.SECONDS)) {
                 System.err.println("Executor did not terminate in the specified time. Forcing shutdown...");
 
                 // Force shutdown and log unfinished tasks
