@@ -1,4 +1,4 @@
-## Workspace for Middleware Management Microservice
+# Workspace for Middleware Management Microservice
 
 To start the microservice, run the commands below in order
 
@@ -18,7 +18,7 @@ mvn javadoc:javadoc
 
 ---
 
-### Testing
+## Testing
 
 The concurrency tests (MiddlewareConcurrencyTest.java) will run during ``` mvn clean install ```.
 
