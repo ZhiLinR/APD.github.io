@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class MockJWTRepository {
     private List<JWToken> tokens;
-    private static final int EMAIL_NUM = 10000; // Number of hardcoded email addresses
+    private static final int EMAIL_NUM = 10_000; // Number of hardcoded email addresses
     private final String[] EMAILS = generateEmails(EMAIL_NUM); // Hardcoded email addresses
 
     /**
