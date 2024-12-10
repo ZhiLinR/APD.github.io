@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+**.env**
+target/
+# Ignore everything in graphrag/ragtest
+graphrag/ragtest/*
+
+# Exclude input directory
+!graphrag/ragtest/input/
+# Exclude prompts directory
+!graphrag/ragtest/prompts/
