@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"middlewareapd.service","l":"MiddlewareConcurrencyTest"},{"p":"middlewareapd.service","l":"MiddlewareServiceTest"},{"p":"middlewareapd.repository","l":"MockJWTRepositoryTest"},{"p":"middlewareapd.util","l":"ValidationUtilTest"}];updateSearchResults();

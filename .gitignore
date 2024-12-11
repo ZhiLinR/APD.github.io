@@ -9,3 +9,5 @@ graphrag/ragtest/*
 !graphrag/ragtest/input/
 # Exclude prompts directory
 !graphrag/ragtest/prompts/
+
+Middleware-APD/

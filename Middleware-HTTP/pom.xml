@@ -80,6 +80,12 @@
             <version>2.1.0</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.classgraph</groupId>
+            <artifactId>classgraph</artifactId>
+            <version>LATEST</version>
+        </dependency>
     </dependencies>
 
         <build>

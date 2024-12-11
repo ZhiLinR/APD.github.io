@@ -62,7 +62,7 @@ public class MiddlewareControllerTest {
                                                 .completedFuture(Map.of("uuid", "12345", "isAdmin", "true")));
 
                 mockMvc.perform(get("/api/auth/jwt")
-                                .header("jwt", "valid-jwt-token"))
+                                .header("Authorization", "valid-jwt-token"))
                                 .andExpect(status().isOk())
                                 .andExpect(jsonPath("$.message", is("JWT validation successful.")))
                                 .andExpect(jsonPath("$.success", is(true)))
@@ -77,7 +77,7 @@ public class MiddlewareControllerTest {
                                                 .failedFuture(new UserNotFoundException("User not found")));
 
                 mockMvc.perform(get("/api/auth/jwt")
-                                .header("jwt", "valid-jwt-token"))
+                                .header("Authorization", "valid-jwt-token"))
                                 .andExpect(status().isNotFound())
                                 .andExpect(jsonPath("$.message", is("User not found")))
                                 .andExpect(jsonPath("$.success", is(false)));
@@ -90,7 +90,7 @@ public class MiddlewareControllerTest {
                                                 .failedFuture(new UnauthorizedException("Unauthorized access")));
 
                 mockMvc.perform(get("/api/auth/jwt")
-                                .header("jwt", "valid-jwt-token"))
+                                .header("Authorization", "valid-jwt-token"))
                                 .andExpect(status().isUnauthorized())
                                 .andExpect(jsonPath("$.message", is("Unauthorized access")))
                                 .andExpect(jsonPath("$.success", is(false)));
@@ -102,7 +102,7 @@ public class MiddlewareControllerTest {
                                 .thenReturn(CompletableFuture.failedFuture(new RuntimeException("Unexpected error")));
 
                 mockMvc.perform(get("/api/auth/jwt")
-                                .header("jwt", "valid-jwt-token"))
+                                .header("Authorization", "valid-jwt-token"))
                                 .andExpect(status().isInternalServerError())
                                 .andExpect(jsonPath("$.message", is("Unexpected error")))
                                 .andExpect(jsonPath("$.success", is(false)));
