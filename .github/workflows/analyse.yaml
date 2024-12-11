@@ -2,7 +2,7 @@ name: Analyse and Create a Summary of the Changes in the Commit
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "deploy" ]
     paths:
       - 'Middleware-HTTP/src/**' # Run when there is a push to the path User/src
       - 'Middleware-HTTP/Dockerfile'
